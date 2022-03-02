@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Example 2</title>
+  <!-- <script src="scripts.js"></script> -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+      form {
+  border: 1px solid orange;
+  padding: 1rem;
+}
+
+.submitted {
+  border: 1px solid gray;
+}
+  </style>
+</head>
+
+<body>
+
+
+<main>
+    <form id="car">
+        <label> These are  my favorite car types.
+          <!-- <input type="text" class="input"> -->
+        </label>
+        <input type="submit" value="favorite car types">
+        
+      </form>
+      <script>
+          const carForm = document.querySelector('#car')
+
+carForm.addEventListener('submit', function(event){
+	event.preventDefault()
+  
+     
+   const cars = ["Mini" , "Camero" , "Fiat"];
+
+    let text = "";
+    for (let x of cars) {
+    text += x + "<br>";
+    }
+
+	const sentence = document.createTextNode(`these are my favorites ${cars}`)
+    const p = document.createElement('p')
+    p.appendChild(sentence)
+    this.appendChild(p)
+    this.classList.add('submitted')
+
+
+	
+  
+})
+      </script>
