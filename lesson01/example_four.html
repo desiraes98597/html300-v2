@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Example 4</title>
+  <!-- <script src="scripts.js"></script> -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+      form {
+  border: 1px solid orange;
+  padding: 1rem;
+}
+
+.submitted {
+  border: 1px solid gray;
+}
+  </style>
+</head>
+
+<body>
+
+
+<main>
+
+
+    <form id="squaring">
+        <label> Enter a number between 10 and 15 to see it's square root
+          <input type="text" class="input">
+        </label>
+        <input type="submit"  value="Square Root">
+        <p class="output"></p>
+      </form>
+     
+      <script>
+           const squareForm = document.querySelector('#squaring')
+
+           squareForm.addEventListener('submit', function(event){
+            event.preventDefault()
+
+            // user input data
+            const userInput = document.querySelector('#squaring .input').value
+            const unserNumber = parseInt(userInput)
+
+            //user output
+            const output = document.querySelector('#squaring .output')
+            output.innerHTML = "The number squared is" + " " + Math.sqrt(userInput);
+           });
+      
+         
+      </script>
+      </main>
+
+</body>
+</html>
