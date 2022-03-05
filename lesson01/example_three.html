@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Example 3</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+      form {
+  border: 1px solid orange;
+  padding: 1rem;
+}
+
+.submitted {
+  border: 1px solid gray;
+}
+  </style>
+</head>
+<body>
+        <form id="guess">
+           <label> Guess a number
+             <input type="text" class="input">
+           </label>
+             <input type="submit"  value="Guess">
+             <p class="output"></p>
+        </form>
+
+        <script>
+           const guessForm = document.querySelector('#guess')
+
+          guessForm.addEventListener('submit', function(event){
+            event.preventDefault()
+
+            // user input data
+            const userInput = document.querySelector('#guess .input').value
+            const userNumber = parseInt(userInput)
+
+            //user output
+            const output = document.querySelector('#guess .output')
+            output.innerHTML = "The number you guessed was" + " " + Math.ceil((userInput) );
+           });
+      
+         
+      </script>
+   </main>
+  </body>
+
