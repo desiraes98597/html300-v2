@@ -1,0 +1,57 @@
+[MUSIC PLAYING]
+
+Welcome back.
+It's Aaron Katz again.
+In this video, we're covering why to use animations.
+The user experience is just as important as the site itself.
+If you don't think about what the user will interact with at a site,
+you might build a really bad site.
+So no need to write any code for this video-- just
+sit back, relax, and get ready to learn.
+The first thing we need to do is talk about what the user will do.
+What information are you trying to convey
+to the user, such as having a button that pulsates when the user will hover
+over it or if there's a check box in the form for correcting information,
+changing the outline of the box with red so people know that it's incorrect?
+So if someone's hovering over a button and it's pulsating,
+this just tells the user that you want them to press it.
+If they submit a form-- and we all submit forms and hit a button--
+and there's an error on it, then a red outline
+lets the user know without having to think too much about it
+that here's where your mistake is.
+You should also think about what changes to the UI
+happen as a result of the user clicking on the button.
+So if you have a pop-up that has an "x" in the upper corner,
+the user knows that if they click on this, it'll close the pop-up.
+An on or off toggle also changes what's on the screen.
+This way, the user knows that you're turning something on or off.
+Think about on your phone when you're turning the Wi-Fi on and off.
+It's an on and off toggle.
+So you know that when it's on, it's searching for Wi-Fi.
+When it's off, it's not searching for Wi-Fi.
+Also, if you use highlights to tell the user what information is important,
+such as a pulsing ball or a button that shakes,
+it's a good way to get the user attention
+and let them know what's important, what you want them to see on the page.
+Letting the user know the system status is also very important.
+It takes time for data to be sent to the database and respond.
+A loading bar or a little spinner lets the user
+know that something is loading.
+I like using the loading bar a little bit better, because it moves.
+So it lets the user feel like something is happening.
+Without it, the user doesn't know if the site is working.
+So they might press Submit again.
+They might get aggravated and leave the site.
+So another example is at my old job, we used Slack a lot to communicate.
+And I have an image of myself inside of the little black screen.
+So when I'm talking to someone, the edge of the picture
+has these little waves on them that move around.
+And that lets me know if someone's talking.
+There have been a couple of times where I've had my volume down,
+and I wasn't able to hear someone.
+But I see those, and I'm able to realize that I have to turn my volume up.
+Hope you learned about when to use animations.
+If you want to learn more, Mozilla has some great development documentation
+on everything we covered here today.
+Happy coding.
+[MUSIC PLAYING]

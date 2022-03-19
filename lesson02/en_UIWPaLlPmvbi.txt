@@ -1,0 +1,83 @@
+[MUSIC PLAYING]
+Welcome back.
+It's Aaron Katz again.
+In today's lesson, we will cover transitions and how to use them.
+At this point, you may have learned using jQuery
+how to move your HTML elements.
+Well, you can also use your CSS to move your HTML.
+Let's start by understanding a little bit about what transitions are.
+If you want to change a color from black to white,
+the change will be instantaneous.
+But with transitions, you get to control the speed of the color change.
+When you use transitions, there are four parameters you use:
+the transition property, the transition duration, the timing, and the delay.
+The property in this case is going to be transform.
+The duration is how long you want the animation to take place.
+The timing is how you want the transition to look.
+It can jump or be at ease.
+The first two parameters are required; the second two are optional.
+The transform property is where the transition will take place.
+So right now let's start by taking a look at our code.
+I open up CodePen and you can see the link at the top of my page right here.
+It's saved in case you want to use it.
+I'm also using SCSS and minimizing the JS screen.
+So to minimize the JS screen, if you click on JS,
+you're going to see this minimize JS editor.
+You're going to click on that.
+And for SCSS you're going to click on that little widget button
+and right here where it says, CSS preprocessor,
+you're going to hit the down button, click on SCSS, and save and close.
+So once you do that, everything should be already setup.
+Know in our HTML we're going to create two classes.
+On the outside we're going to have the trigger class, and on the inside
+we're going to have the box class.
+
+The reason why we're doing this is so when a user hovers over trigger,
+the box would move.
+Without the outer box, the transition will look a little jittery
+because the animation will follow the mouse.
+So if you keep that-- when you transition over it, the box will move,
+and it'll stop right around here because your mouse no longer covers the box.
+But trigger, you can just leave your mouse right there.
+Next thing we're going to do is we're going to go into our CSS
+and we are going to create a box.
+So we're going to create the box and it is
+going to be a display inline, a background of red,
+and we're going to make it width of 100 pixels, the height of 100 pixels.
+And we'll go into this transition thing in a little bit.
+
+So right now he should have this little box.
+Not very exciting.
+Not much that it does.
+But let's take a look at this transition.
+So we have transform, which if we go down here, we see transform.
+It's kind of like a function call, almost.
+You're saying, OK, this transition is going
+to wait for this transform to call, and it's going to take 300 milliseconds.
+You can use seconds, you can use milliseconds, you
+could use as much time as you want.
+And ease so it transitions smoothly.
+Now we're going to trigger the element basically on the hover.
+So it's going to be trigger and then this colon and hover.
+If you remember from CSS, this is when you add something
+so if you do something to the element, it knows how to react.
+So trigger: hover and box.
+And then we're going to transform.
+We're going to translate it, meaning we're
+going to move it 200 pixels down and 150 pixels across while rotating it
+20 degrees.
+So we're going to save it.
+And then when we hover over it, it kind of disappears.
+Let's move that up.
+You see how it kind of moves a little bit, right?
+And then you go up and it hovers back.
+Now if we get rid of trigger and save, it's
+acting a little funky when you get over it.
+And that's why you want that box there, so it transitions smoother.
+See?
+That looks much nicer.
+Hope you learned about transitions and how they work.
+If you want to learn more Mozilla has some great development documentation
+on everything we covered today.
+Happy coding.
+[MUSIC PLAYING]
