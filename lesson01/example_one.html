@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Example 1</title>
+  <!-- <script src="scripts.js"></script> -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+      form {
+  border: 1px solid orange;
+  padding: 1rem;
+}
+
+.submitted {
+  border: 1px solid gray;
+}
+  </style>
+</head>
+
+<body>
+
+
+<main>
+    <form id="age">
+        <label> If every human year is 15 years in a cat's life, how old are you in cat years?
+          <input type="text" class="input">
+        </label>
+        <input type="submit" value="age in cat years">
+        
+      </form>
+      <script>
+          const catForm = document.querySelector('#age')
+
+catForm.addEventListener('submit', function(event){
+	event.preventDefault()
+  
+  // Handle input
+  const userInput = document.querySelector('#age .input').value
+  const userNumber = parseInt(userInput)
+  console.log(userNumber)
+	
+  if(!isNaN(userNumber)){
+  	// Handle output
+		const text = document.createTextNode(`so you are ${userNumber / 15} years old?`)
+    const p = document.createElement('p')
+    p.appendChild(text)
+    this.appendChild(p)
+    this.classList.add('submitted')
+	
+  }
+  
+})
+      </script>
+      </main>
+      </body>
