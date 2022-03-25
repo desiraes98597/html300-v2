@@ -1,5 +1,7 @@
+
 html {
     box-sizing: border-box;
+    background-color: $mycolor;
 }
 
 *,
@@ -8,10 +10,10 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
-}
 
 h1 {
     color: $red;  
 }
+
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Example 5</title>
+  <!-- <script src="scripts.js"></script> -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+      form {
+  border: 1px solid orange;
+  padding: 1rem;
+}
+
+.submitted {
+  border: 1px solid gray;
+}
+  </style>
+</head>
+
+<body>
+
+
+<main>
+    <form id="favorite">
+        <label> Which do you think is my favorite animal? Is it a Parrot, Cat or Rabbit?
+            <input type="text" class="input">
+
+        </label>
+        <input type="submit" value="favorite animal">
+        
+      </form>
+      <p id="animals"></p>
+
+<script>
+
+let john = { name: 'John ' },
+  lily = { name: 'Lily ' },
+  peter = { name: 'Peter ' };
+
+let animals = new Map([
+  [john, 'parrot'],
+  [lily, 'cat'],
+  [peter, 'rabbit'],
+]);
+
+document.getElementById("animals").innerHTML = "My favorite animal is " + 'parrot';
+// for (let role of animals.values()) {
+//   console.log(role);
+// document.getElementById("animals").innerHTML = animals.has("parrot", "cat", "rabbit");
+// }
+
+
+
+</script>
+</main>
+</body>

@@ -1,0 +1,73 @@
+
+[MUSIC PLAYING]
+
+Welcome back.
+It's Aaron Katz again.
+In this video, we're going to introduce animations and how to use them.
+At this point, you may have learned about using jQuery
+to move your HTML elements.
+Well, you can do the same thing using CSS.
+Let's start by understanding a little bit about animations.
+Animations make it possible to transition from one to another.
+Animations have two parts, the style describing the animations
+and the key frames that indicate the start and the end of the style.
+When you use animations, there can be up to eight parameters.
+You start with the name of the key frame that you're going to use.
+Think of it as calling a function in JavaScript.
+The duration is how long you want the animation to take place.
+The timing is how you want the transition to look.
+It could jump or be at ease.
+You can also add in a delay, how many iterations you want, directions,
+fill mode and play-state state.
+I opened this up in code pen, and you can tell this URL right
+up here if you want to type that in.
+I have it saved so you can play around with my code.
+Couple of things you want to do, you might want to do.
+So if the JS box is open, you can close it
+by clicking on this button on the JS box and clicking that minimize JS editor.
+You're also going to want to use Sass.
+So click on this widget, and right over here it says SCSS, Sass right here.
+So you can use this, and you save and close.
+And that should take care of that.
+In our HTML, we're going to create a box.
+So right over here, a div with a class of box.
+And then in our CSS, we're going to create a box with a background of red,
+a height and a width of 100, and a position of relative.
+
+So it should have a nice little box like that right there.
+So this really doesn't do much.
+So let's create an animation right here where we're going to call it my frames.
+So we know that when we use a key frame, it's going to call my frames.
+Two seconds, so the animation will take two seconds.
+And it's going to ease in and out.
+Zero seconds, so if we want to put a delay,
+we can change that to one second, so there's a delay.
+And infinite just means it goes on an infinite loop,
+that it will happen forever.
+So we have to create a key frame rate down here.
+And there are a couple of different ways you can do the key frame.
+So the key frame with the name of it is going to be the same.
+But you see how I have 0 and 50 and 100.
+You can do start and finish, or you can do a specific for percentage.
+So you can start at 100.
+You can start at zero, move to 20, then 40, then 60, then 80 if you want.
+
+So right now, at 0%, we want the height to be
+at 100, which is what it is right now.
+So we'll save that, and nothing changes.
+And let's say we want at the end for the height
+to be 600 and the background to be green.
+So if we press save, you see how this is growing right here,
+and it changes to green.
+Well let's say we want to do something in the middle.
+So in the middle, we can have the width be 200.
+So now when it starts, see how it goes out and comes back in.
+The with expands to 200, and then it goes back to 100.
+Now, if we want to leave the width like that, we can just do comma 100.
+And see now how it just expands, and then it goes back.
+So if you want to keep that width for the rest of the time,
+you just do comma and then how long you want it to stay for.
+Hope you learned about animations and how they work.
+If you want to learn more, Mozilla has some great development documentation
+on everything we covered today.
+Happy coding.

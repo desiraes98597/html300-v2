@@ -1,6 +1,147 @@
 // Import partials here
-@import 'base.normalize';
+// @import 'base.normalize';
+// @import 'settings.variables';
+// @import 'settings.responsive';
+// @import 'components.content';
+
+
 @import 'settings.variables';
 @import 'settings.responsive';
-@import 'components.content';
+
+html {
+    box-sizing: border-box;
+    // background-color: $mycolor;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+
+
+.main {
+    display:grid;
+    align-content: center;
+    margin: 2rem;
+    padding:1rem;
+    border: 1px solid $alto;
+    // border:$border;
+    border-width: 3em;
+
+}
+
+.divide{
+    display:grid;
+    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas: 
+      'left right';
+}
+
+.left {
+        display:grid;
+        grid-area:left;
+        margin-left:$marginleft-left;
+  img {
+        border-radius: 50%;
+        width:100%;
+        height:auto;
+        margin-top:3rem;
+  }
+  h2 {
+        color: $dove-gray;
+        text-align: center;
+        font-size: 2em;
+        padding:0px;
+        margin:0px;
+    }
+  h3 {
+        color: $dusty-gray;
+        text-align: center;
+        font-size:1.4em;
+        padding:0px;
+        margin:0px;
+    }
+}
+
+
+.right {
+    background-color: $wild-sand;
+       display:grid;
+    grid-area:right;
+    margin-left:$marginleft-right;
+    margin-top:3rem;
+    margin-bottom:3rem;
+    margin-right: 2rem;
+
+   h2 {
+        color: $dove-gray;
+        margin-left:$marginleft-right;
+    }
+
+   h3 {
+        color: $scorpion;
+        margin-left:$marginleft-right;
+    }
+   img {
+        margin-left:$marginleft-right;
+        margin-bottom: 2rem;
+        float:left;
+        padding-right: 1rem;
+    }
+  
+}
+
+.smaller {
+    font-size:$myFontSize;
+    color: $scorpion;
+}
+
+/* media queries*/
+
+// @media (min-width: $breakpoint-tab) {
+//     .divide{
+//         grid-template-columns: 1fr;
+//         grid-template-rows: 1fr 1fr;
+//      }
+// }
+
+
+
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+    .main {
+        border-width:1.5rem;
+    }
+    .divide{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        display:block;   
+      }
+      .right {
+        margin-left:0.1rem;
+        margin-right:0.5rem
+       }
+
+       .left {
+        margin-left:0.1rem;
+        margin-right:0.5rem
+       }
+       .smaller {
+           display:block;
+       }
+       .right p {
+           text-align: center;
+       }
+  }
+
+  @media only screen and (min-width: 280px)  {
+    .main {
+       margin:0;
+    }  
+
+}
 

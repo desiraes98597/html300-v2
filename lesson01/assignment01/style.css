@@ -1,0 +1,8 @@
+form {
+  border: 1px solid orange;
+  padding: 1rem;
+}
+
+.submitted {
+  border: 1px solid gray;
+}

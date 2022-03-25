@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Example 6</title>
+  <!-- <script src="scripts.js"></script> -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+      form {
+  border: 1px solid orange;
+  padding: 1rem;
+}
+
+.submitted {
+  border: 1px solid gray;
+}
+  </style>
+</head>
+
+<body>
+
+
+<!-- <main> -->
+
+
+    <form class="bird">
+        <label> If my parrot is 8 years old. What year was he born?
+          <input type="text" class="input">
+        </label>
+        <input type="submit"  value="Square Root">
+        <p class="output"></p>
+      </form>
+
+      <h2>JavaScript Class</h2>
+
+<p>How to use a JavaScript Class.</p>
+
+<p id="bird"></p>
+     
+      <script>
+          class Bird {
+          constructor(name, year) {
+          this.name = name;
+           this.year = year;
+      }
+    }
+
+        const myBird = new Bird("Parrot", 2014);
+        document.getElementById("bird").innerHTML =
+        myBird.name + " " + myBird.year;
+            
+         
+      </script>
+      </main>
+
+</body>
+</html>

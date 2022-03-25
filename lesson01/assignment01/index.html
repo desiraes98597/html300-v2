@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Part 2 Example</title>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Using JavaScript array forEach() Method</h1>
+    <p>Get the sum of all values in an array</p>
+
+    <form id="example-form">
+        <label>Enter numbers to see the sum of all values:
+          <input type="number" class="input">
+        </label>
+        <input type="submit" value="See Demo!">
+    </form>
+    <p>The sum of elements is <span id="demo"></span></p>
+
+
+    <script>
+        const numbers = [];
+        //wait for the page to be loaded, then call the setup function
+        document.addEventListener("DOMContentLoaded", setup);
+
+        //hook up the button to the update function
+        function setup(){
+            document.getElementById("example-form").addEventListener("submit", update);
+        }
+
+        //compute the array sum using forEach
+        function update(event) {
+            event.preventDefault();
+            const inputField = document.querySelector('#example-form .input');
+            const userInput = inputField.value;
+            const userNumber = parseInt(userInput);
+            numbers.push(userNumber);
+            let sum = 0;
+
+            numbers.forEach(myFunction);
+            document.getElementById("demo").innerHTML = sum;
+
+            function myFunction(item) {
+                sum += item;
+
+            }
+
+        }
+    </script>
+    </main>
+
+  <!-- <main>
+    <h1>Input one</h1>
+    <form id="one">
+      <label>How many plants do you own?
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="submit">
+      <p>I see you have a green thumb <span class="output"></span></p>
+    </form>
+  </main>
+  <main>
+    <h1>Input two</h1>
+    <form id="two">
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="See Demo!">
+      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+    </form>
+  </main>
+  <main>
+    <h1>Input three</h1>
+    <form id="three">
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="See Demo!">
+      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+    </form>
+  </main>
+  <main>
+    <h1>Input four</h1>
+    <form id="four">
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="See Demo!">
+      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+    </form>
+  </main> -->
+
+
+</body>
+
+</html>

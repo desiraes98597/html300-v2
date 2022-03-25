@@ -1,0 +1,212 @@
+
+Welcome back.
+It's Aaron Katz again.
+And in today's lesson, we will cover how to create a cool-looking dropdown
+menu that you can impress people with.
+At this point, you may have learned about using this using jQuery.
+But we're going to use our CSS today to move around HTML elements.
+In this example, we're going to use key frames,
+animations, and transform to create a dropdown menu that
+will grab the user's attention.
+I did this on Codepoen, and you can see the URL right here.
+If you want to use that, I've saved it.
+Also, if you want to get rid of the JS box,
+just click on this inside the JS box.
+And you're going to click on Minimize CSS Editor.
+And finally, see how it says SCSS right here?
+So you're going to click on this, the little widget.
+It's CSS Preprocessor.
+I like using SCSS.
+And you're going to hit Save and Close.
+And that should be the setup that you need.
+So right now, we're going to look in our HTML,
+and we're going to create a nav element, just a way to organize everything.
+
+And in our nav element, we're going to create a UL right here on the outside.
+Inside that, we're going to create an LI.
+And I've just called it style1.
+You can call it anything you want.
+Inside that LI, you're going to create another UL.
+You're going to give it a class of menu1 one or just menu.
+And I had 1, 2, 3, 4, 5 LIs in here.
+And I just put the numbers of them right down here.
+You can see the result. It's nothing too fun and exciting.
+You've done this before.
+This looks a little on the boring side, so we're going to UCSS
+to make it a little bit more exciting.
+We'll start by giving the nav a little bit of padding.
+
+And what that does is that-- see how everything is 50 pixels down?
+And then we center aligned it so it looks a lot nicer.
+Then we're going to move toward UL, and we're going to do a couple of things
+with our UL.
+
+The first thing we're going to do is we're going to do list style none.
+So if you look down here, the little dot is done.
+Padding margin of 0.
+And then we're going to do a display inline block so it doesn't look over
+to the next line.
+Then the background is DDD.
+It's also light gray.
+And then a border radius of 5 pixels.
+So this looks a little nicer, but it's still nothing too fun and exciting.
+So let's start with the first LI element.
+
+So we've done a couple of things right here.
+First, you notice that everything is a little further out.
+So we gave it a width and a height, a width of 150 pixels and a height of 65.
+So that looks nicer.
+We gave it a line height of 65.
+So that's this right here.
+The position is relative, so it is going off the next one.
+There's also text transform uppercase.
+You see how style in here is lowercase.
+That style is lowercase.
+Up here, it's uppercase.
+The font size is 14.
+The color, RGB, isn't really that important at this point.
+But the cursor pointer is just--
+when you hover over it, just make sure that the cursor changes to a pointer.
+But still, it doesn't really do much.
+So what we're going to do is we're going to move to our menu1.
+
+And nothing really changed right here, just the position absolute.
+Top at 100%, so it's up here.
+The left, so it's centered.
+The width is 100%, and the padding is 0.
+It doesn't really look like it did much at this point.
+So let's take a look, and let's change around or LI a little bit.
+
+Oh, it disappeared.
+What exactly happened?
+So LI display none, so nothing is going to show.
+Display is dark gray.
+And then here's the color of it.
+So right now, it's not going to do anything.
+But we have this hover element right underneath.
+
+And let's [INAUDIBLE], save.
+
+And when you hover on it, it's going to show--
+
+it's going to show the background and the last child.
+So nothing really is going on right now at this point because we're hovering,
+and it chose the background, but we're not showing the menu at all.
+So we're going to come down here.
+We're going to say, OK, on hover for menu1 for the LI,
+we're going to go through some changes here.
+
+So first thing we're going to do is we're going to have display block.
+
+So all of a sudden-- that's what we were missing before.
+So when you hover over it now, all of a sudden, you see the rest of the menu.
+
+Opacity of 0.
+Why are we doing this opacity of 0?
+Well, now you don't see anything else.
+We want to create some sort of animation for it.
+
+So we can put in an animation right here.
+
+Animation.
+And we'll just going to say menu1 because that's
+the name of it, 300 milliseconds.
+And it's not going to do anything right now because we
+haven't created our key frame.
+So over here, we'll create our key frame.
+
+And menu because that's what it's called.
+At zero, we want opacity to be zero, so nothing is going to change.
+And then transform-- we're going rotate it on its y-axis by 90 degrees
+and translate it down on its y-axis by 30 degrees.
+
+And then-- hold on just a second.
+
+Let's see.
+We got a little bug right here.
+Let's see what's going on.
+
+Save it.
+
+What did I forget?
+Menu 300 seconds, one millisecond.
+Let's try that.
+
+There we go.
+OK.
+Invalid.
+I think there's an extra one of these.
+It says expected at rule.
+So let's see what happens here.
+
+Now let's save it.
+There we go.
+OK.
+So the great thing about code pen is that there's
+a little dot right here that tells you what's going on,
+and it kind of clues you in on what happened.
+So you can just fix that.
+So if you look at style 1, it just pops up for a second,
+and then it disappears.
+It's nothing really that exciting.
+
+So we can do more.
+See how it kind of flipped?
+So what we're going to do is we're going to use a for loop
+that you can use in SCSS or SAS.
+You've used them in JavaScript before.
+So we're going to d a for loop.
+Start with our variable i from 1 to 5.
+
+And within IT we're going to say to the n-th child.
+So this right here is the variable.
+So i is going to start out at 1, then go to 2, then 3, then 4, then 5.
+So for every single one of those, it's going to go to Menu.
+It's going to have a duration of 300 milliseconds and then a delay.
+And the reason why we have a delay is so they're not
+all happening at the same exact time.
+I'm going to ease out, make it look a lot smoother,
+which is why it was kind of funky before.
+And animation film [INAUDIBLE] forwards so it just kind of looks nice.
+Let's see.
+We've got this thing right up here again.
+Let's see what's going on.
+Oh.
+We need that back.
+OK.
+So let's save it.
+And now look at that.
+When you hover over this--
+1, 2, 3, 4, and 5-- they come in a little bit later.
+So what we did--
+we'll just go over this a little bit.
+We have a for loop right here, and it slows it down.
+So the first one comes in.
+It goes to menu1.
+It says opacity 0.
+It transforms.
+It rotates IT and then it appears back.
+And then it takes 300 milliseconds, and then it delays.
+In this first one, it doesn't delay it all.
+It goes 300 milliseconds, 300 minus i.
+
+It's 0, so there's no delay.
+And then animation timing ease in and out,
+and then it goes to the second one.
+And this time it is 600.
+So it delays a little longer, and it keeps
+going to the third one, which delays even more.
+
+So that will take you through this.
+I guess we do need MS in there.
+OK.
+Save it.
+And there we go.
+Yeah, 300 milliseconds.
+So it knows how to save it.
+OK.
+So that covers everything.
+Hope you learned how to make this great dropdown menu.
+If you want to learn more, Mozilla has some great developer documentation
+on here that we covered today.
+Happy coding.
