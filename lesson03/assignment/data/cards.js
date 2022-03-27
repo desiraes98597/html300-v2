@@ -55,7 +55,7 @@ const cardsJSON = `[{"name": "Paolo Maldini","jobTitle": "Front End Developer",
 
   //  adding the main content section
   
-   const container = document.querySelector('.main')
+   const container = document.querySelector('main')
 
   //  for each section loop through and create HTML elements
 
@@ -64,10 +64,10 @@ const cardsJSON = `[{"name": "Paolo Maldini","jobTitle": "Front End Developer",
 
      let list = document.createElement('main')
      list.innerHTML = `
-     <main class="main">
-			<div class="divide">
-				<div class="left">
-        <img src="img/headshot.jpg" alt="headshot of Paolo's dog">
+    <div class="main">
+     <div class="divide">
+     <div class="left">
+          <img src="img/headshot.jpg" alt="headshot of Paolo's dog">
      <h2>${el.name}</h2>
      <h2>${el.jobTitle}</h2>
      </div>
@@ -80,9 +80,10 @@ const cardsJSON = `[{"name": "Paolo Maldini","jobTitle": "Front End Developer",
 				<p><img src="img/linkedin.svg" alt="linkedin logo"> paolo.linkedinprofile.com</p>
 			</div>
       </div>
-		</main>
+	
+
      `
-    container.appendChild(list)
+    container.append(list)
 
    })
 
