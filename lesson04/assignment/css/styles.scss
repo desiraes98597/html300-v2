@@ -42,8 +42,15 @@
     
     // home page 
     .parent {
-        @include parent_home
+        @include parent;
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-areas:
+       'nav nav'
+       'aside1 content1'
+       'footer footer';
      }
+
+     
 
     // navigation 
     nav {
@@ -139,16 +146,12 @@
     
 
     .parent_resume {
-        display: grid;
+        @include parent;
         grid-template-columns: .4fr 1fr;
-        grid-template-rows: auto 1fr auto;
         grid-template-areas:
           'nav nav '
           'aside1_resume content1 '
           'footer footer ';
-        grid-auto-columns: min-content;
-        background-color: $white;
-        min-height: 100%;
      }
 
     .content1_resume {
@@ -280,17 +283,12 @@
     // contact page
  
     .parent_contact {
-        display: grid;
+        @include parent;
         grid-template-columns: .6fr 1fr 1fr;
-        grid-template-rows: auto 1fr auto;
         grid-template-areas:
-         
           'nav nav nav'
           'aside1 content1 content1'
           'footer footer footer';
-        grid-auto-columns: min-content;
-        background-color: $white;
-        min-height: 100%;
       }
 
      .content1_contact {

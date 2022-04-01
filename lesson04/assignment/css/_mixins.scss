@@ -37,17 +37,14 @@
 }
 
 
-@mixin parent_home {
+@mixin parent {
     display: grid;
-    grid-template-columns:  1fr 0.5fr ;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-      'nav nav'
-      'aside1 content1'
-      'footer footer';
+    grid-auto-columns: min-content;
     background-color: $white;
     min-height: 100%;
   }
+
 
   @mixin nav {
     grid-area: nav;
