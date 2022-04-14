@@ -1,0 +1,81 @@
+@mixin h1 {
+    padding-left:.5em;
+    padding-top:.2em;
+    font-family:$font-cursive;
+}
+
+@mixin h2 {
+    padding-left:1rem;
+    padding-right:1rem;
+    line-height: 3.5rem;
+}
+
+@mixin h3-6  {
+    padding-left:1.5em;
+    font-family: $font-regular;
+    line-height: 1.5rem;
+    
+} 
+
+@mixin p {
+    padding-left:1.5em;
+    font-family: $font-regular;
+    line-height: 1.5rem;
+  
+    
+}
+
+@mixin link {
+    text-decoration: none;
+    color:purple;
+}
+
+
+@mixin hover {
+    color:#b7492c;
+    font-weight: 700;
+}
+
+
+@mixin parent {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-auto-columns: min-content;
+    background-color: $white;
+    min-height: 100%;
+  }
+
+
+  @mixin nav {
+    grid-area: nav;
+    display:grid; 
+    background-color:$light-blue;
+    min-height: 55px;
+    align-items: center; 
+    min-height:50px;
+    -webkit-box-shadow: -1px 1px 5px 4px rgba(63, 62, 62, 0.75);
+    -moz-box-shadow: -1px 1px 5px 4px rgba(63, 62, 62, 0.75);
+    box-shadow: -1px 1px 5px 4px rgba(63, 62, 62, 0.75);      
+   
+}
+
+    @mixin nav_ul {
+    text-align: right;   
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    align-content:center; 
+    }
+
+    @mixin nav_li {
+    height: 100%;
+    display:inline-flex;
+    text-align: end;
+    padding-right: 5%;
+    margin-top:1%;
+    font-size: 2rem;
+    font-family:$font-cursive;
+
+    }

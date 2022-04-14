@@ -1,0 +1,384 @@
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'mixins';
+
+  * {
+    margin:0; padding:0; border:0; box-sizing:border-box; 
+    } 
+    
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+       @include h1    
+     }
+    
+    h2 {
+        @include h2
+     } 
+    
+    h3, h4, h5, h6  {
+        @include h3-6 
+        
+     } 
+    
+    p {
+        @include p 
+     }
+    
+    a:link {
+        @include link 
+     }
+    
+    a:hover {
+        @include hover 
+     }
+    
+    #current {
+        color:$white;
+     }
+    
+    // home page 
+    .parent {
+        @include parent;
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-areas:
+       'nav nav'
+       'aside1 content1'
+       'footer footer';
+     }
+
+     
+
+    // navigation 
+    nav {
+        @include nav
+     }
+    
+    nav ul {
+        @include nav_ul
+     }
+    
+    nav li {
+        @include nav_li
+        
+     }
+    
+    // aside top
+    .aside1 { 
+        grid-area: aside1;
+        display:grid; 
+     }
+
+    .aside1 h1 { 
+        margin-left:1.5rem;
+        // margin-top: 5rem;
+        line-height: 200%;
+     }
+
+    .aside1 img { 
+        margin-top: 10px;
+        margin-left: 2rem;
+     }
+  
+  //   transform and transition of image on front page: https://www.lambdatest.com/blog/css-transforms-and-transitions-property/ 
+      
+    .content1 {
+        grid-area: content1;
+        display:grid; 
+        -webkit-box-shadow: -10px 0px 25px 0px rgba(63, 62, 62, 0.75);
+        -moz-box-shadow: -10px 0px 25px 0px rgba(63, 62, 62, 0.75);
+        box-shadow: -10px 0px 25px 0px rgba(63, 62, 62, 0.75); 
+        background-color: #b7492c;
+        margin-top:5.5rem;
+        margin-bottom:5.5rem;
+        margin-right:1rem;
+        border-radius: 50px;
+        -webkit-transition: background 2s; /* For Safari 3.0 to 6.0 */
+        transition: background 2s; /* For modern browsers */
+     }
+
+   .content1:hover {
+    background: $light-blue;
+     }
+ 
+   .content1 img {
+        display:grid;
+        grid-area: right;
+        border-radius: 50px;
+        box-shadow: -5px 0px 15px 0px rgba(63, 62, 62, 0.75); 
+        width:100%;
+        margin-right:12rem;
+        text-align: center;
+        transition: transform 1s;
+     }
+
+   .content1 img:hover{ 
+       transform: rotate(5deg);
+     }
+    
+       
+    blockquote {
+    color: $black;
+    font-size: 1.3em;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:2%;
+    padding-bottom:2%;
+    line-height:200%;
+     }
+      
+    .skills:nth-child(1) {
+        color: $silver;
+     }
+  
+    .padding {
+        padding:1%;
+     }
+    
+    article {
+        flex: 1 0 auto;
+     }
+    
+    /* resume page */
+    
+
+    .parent_resume {
+        @include parent;
+        grid-template-columns: .4fr 1fr;
+        grid-template-areas:
+          'nav nav '
+          'aside1_resume content1 '
+          'footer footer ';
+     }
+
+    .content1_resume {
+        grid-area: content1;
+        display:grid; 
+     }
+
+      
+    .skills {
+        display:inline-block;
+        color: $white;    
+        font-weight: 700;
+        line-height: 1.5em;
+        font-family:$font-cursive;
+     }
+    
+    .aside1_resume {
+        border-right: 2px solid $silver;
+     }
+
+    .para1 {
+        display:inline-block;
+        color: $purple;    
+        font-weight: 700;
+        line-height: 2em;
+        font-size: 2em;
+        font-family:$font-cursive;
+        padding-left:1em;        
+     } 
+         
+    .para2 {
+        display:inline-block;
+        color: $purple;    
+        font-weight: 700;
+        line-height: 2em;
+        font-size: 2em;
+        font-family:$font-cursive;
+        padding-left:1em;
+     } 
+    
+    .para3 {
+    
+        display:inline-block;
+        color: $purple;    
+        font-weight: 700;
+        line-height: 2em;
+        font-size: 2em;
+        font-family:$font-cursive;
+        padding-left:1em;
+     } 
+
+    .para1 .para2 .para3 p {
+        display:inline-block;
+        color: $purple;    
+        font-weight: 700;
+        line-height: 3em;
+        font-size: 1.5em;
+        font-family: $font-regular;
+        padding-left:1em;
+        padding-right:5rem;
+        padding-bottom:2rem;
+     }
+    
+    
+    /* resume main body */
+    .resume-page {
+        display: block;
+        color: $black;
+        font-family: $font-regular;
+        font-weight: 700;
+        padding-left: 2%;
+        margin-left: 0.5rem;
+        margin-right:1rem;
+     }
+    
+    .larger {
+        padding-left: 3%;
+        padding-top:3%;
+        font-size: 3rem;
+        font-family:$font-cursive;
+     }
+    
+    .resume-page  h2, h3, h4, h5 {
+        padding-left: 3%;
+        padding-bottom: .5%;
+        margin-left:.5rem;
+        margin-right:.5rem;
+     }
+
+    .resume-page  h2{
+        font-family:$font-cursive;
+        color:$purple;
+     }
+    
+    .resume-page p {
+        font-family: $font-regular;
+        font-weight: 700;
+        padding-left:4%;
+        padding-right:8%;
+        line-height: 1.5rem;
+     }
+    
+    .resume-page ul {
+        font-family: $font-regular;
+        font-weight: 700;
+        padding-left:6%;
+        padding-right:2%;
+        line-height:1.5rem;
+     }
+    
+    .resume-page li {
+        font-family: $font-regular;
+        font-weight: 700;
+        padding-left:2%;
+        padding-right:2%;
+        list-style:disc;
+     }
+    
+    figure {
+        display: inline-flex;
+        text-align: center;
+        padding: 5%;
+     }
+
+    figure img {
+        border: $black 2px solid;
+     }
+
+    // contact page
+ 
+    .parent_contact {
+        @include parent;
+        grid-template-columns: .6fr 1fr 1fr;
+        grid-template-areas:
+          'nav nav nav'
+          'aside1 content1 content1'
+          'footer footer footer';
+      }
+
+     .content1_contact {
+        grid-area: content1;
+        display:grid; 
+      }
+
+     .aside1_contact h1 { 
+        margin-left:0;
+        line-height: 200%;
+      }
+    
+     .form {
+         padding-left:2rem;
+         padding-top:1rem;
+         background-color: $white;
+      }
+    
+      button, input, select, textarea {
+        font-family:inherit;
+        font-size:1em;
+        box-sizing: border-box;
+        display: block;
+        margin:1rem;
+      }
+      
+      input[type=submit]{
+        width:50%;
+        background-color: $light-blue;
+      }
+    
+      #phone{
+        font-size: 1.5em;
+        padding-left:.5rem;
+      }
+    
+      input[type=password]:focus {
+          background-color: seagreen;
+          outline:none;
+      }
+    
+      label {
+            font-size:1.5em;
+      }
+      input {
+          border-radius: 8px;
+          background-color: $light-blue;
+          width: 25rem;
+          height: 4rem;
+      }
+    
+      textarea {
+          border: solid $black 1px;
+          padding-left:1rem;
+      }
+    
+      fieldset {
+          border:none;
+      }
+    
+      fieldset input {
+          display:inline;
+          color:orange;
+      }
+    
+/*footer*/
+      footer { 
+        grid-area: footer;
+        display:grid; 
+        text-align:center;
+        min-height: 50px;
+        background-color: $light-blue;
+        color:$white;
+        padding-top: 1%;
+        -webkit-box-shadow: -1px 1px 5px 4px rgba(63, 62, 62, 0.75);
+        -moz-box-shadow: -1px 1px 5px 4px rgba(63, 62, 62, 0.75);
+        box-shadow: -1px 1px 5px 4px rgba(63, 62, 62, 0.75); 
+      }
+    
+   
+    
+    
+    
+     
+    
+     
+    
+    
+    
+      
+    
+       
+        
