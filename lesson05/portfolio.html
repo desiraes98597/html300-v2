@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang ="en">
+   <head>
+        <meta charset="utf-8">
+        <title>Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/244a5d22d8.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+       
+    </head>
+  <body>
+
+    <!-- overarching class -->
+     <div class="parent_portfolio">
+
+        <div class="header"></div>
+
+    <!-- navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" >Home</a> </li>
+            <li> |</li>
+            <li><a href="resume.html">Resume </a></li>
+            <li> |</li>
+            <li><a href="contact.html">Contact </a></li>
+            <li> |</li>
+            <li><a href="portfolio.html" id="current">Portfolio</a></li>
+            <li> |</li>
+            <li><a href="#">Blog </a></li>
+        </ul>  
+    </nav>  
+
+       
+     <!-- sidebar content -->
+    <div class="side-bar"><h1>Portfolio</h1>
+        <div class="buttons">
+          <h4><a href="#" onclick="show('Section1');">Learning Management System Gateway </a></h4>
+          <h4><a href="#" onclick="show('Section2');">GSA Academy Home Page </a></h4>
+          <h4><a href="#" onclick="show('Section3');">GSA Academy Loss Prevention  </a> </h4>
+          <h4><a href="#" onclick="show('Section4');">Tools and Support Home Page </a> </h4>
+          <h4><a href="#" onclick="show('Section5');">Tool and Support Internal Page </a> </h4>
+          <h4><a href="#" onclick="show('Section6');">GSA Catalog Home Page </a> </h4>
+        </div>
+    </div>
+
+   <div class="main-content">
+    <div>
+      <div>
+          <h1 >Select an item to the left to view individual images of created sites. </h1>
+          <div id="Section1" style="display: none;">
+              <h4>This is the landing page of our Learning Management System. It is a one-stop-shop for all things learning,
+                  allowing the learner to go directly to the page they want.</h4>
+              <h3><a href="images/gateway.png"  target="_blank"><img src="images/gateway_sm.png" alt="gateway webpage"><br>Click on image for larger view</a></h3>
+          </div>
+          <div id="Section2" style="display: none;">
+              <h4>This is the home page of the Loss Prevention Academy. Participants can navigate to all class information required 
+                  at the academy.
+              </h4>
+              <h3><a href="images/gsa_home.png"  target="_blank"><img src="images/gsa_home_sm.png" alt="gsa webpage" ><br>Click on image for larger view</a></h3>
+           </div> 
+          <div id="Section3" style="display: none;">
+              <h4>This is one of the internal pages of the Loss Prevention Academy</h4>
+              <h3><a href="images/gsa_2.png"  target="_blank"><img src="images/gsa_2_sm.png" alt="gsa webpage" ><br>Click on image for larger view</a></h3>
+           </div> 
+          <div id="Section4" style="display: none;">
+              <h4>This is on-line catalog of all tools available team wide. Each page lists the tools and open to information about the tool.  </h4>
+              <h3><a href="images/tools_home.png"   target="_blank"><img src="images/tools_home_sm.png" alt="tools and support webpage"><br>Click on image for larger view</a></h3>
+          </div> 
+          <div id="Section5" style="display: none;">
+             <h4>This is the internal page of the tools catalog</h4>
+             <h3><a href="images/tool_2nd.png" target="_blank"><img src="images/tool_2nd_sm.png" alt="tools and support webpage"><br>Click on image for larger view</a></h3>
+          </div> 
+          <div id="Section6" style="display: none;">
+            <h4>This is a catalog of all current Learning Objects</h4>
+            <h3><a href="images/catalog.png"  target="_blank"><img src="images/catalog_sm.png" alt="catalog webpage"><br>Click on image for larger view</a></h3>
+          </div> 
+        </div>
+      </div>
+    </div>
+   </div>
+
+    <footer>
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script>  Denise Pedro | <a href="denisepedro.com" target="_blank"> denisepedro.com</a> <i class="far fa-envelope-open"></i></p>
+    </footer>
+
+    <script>
+      var divs = ["Section1", "Section2", "Section3", "Section4" , "Section5", "Section6"];
+      var visibleId = null;
+      function show(id) {
+      if(visibleId !== id) {
+        visibleId = id;
+      } 
+      hide();
+      }
+      function hide() {
+      var div, i, id;
+      for(i = 0; i < divs.length; i++) {
+        id = divs[i];
+        div = document.getElementById(id);
+        if(visibleId === id) {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      }
+      }  
+  </script>
+
+    <!-- IGNORE FOR NOW, WORKING ON MODAL POP UP FOR IMAGES -->
+
+      <!-- <div id="Section1" style="display: none;">
+        <ul id="all-images">
+      <li><img class="small-image" src="images/gateway_sm.png" alt=""></li>   -->
+
+      <!-- <ul id="all-images">
+      <li><img class="small-image" src="images/gateway_sm.png"></li> -->
+
+      <!-- </ul> -->
+
+
+      <!-- <div id="image_popup">
+        <button id="close-btn">X</button><br><br>
+        <img id="large-image" src="images/gateway.png">
+      </div> -->
+
+    <!-- <div id="show_image_popup">
+      <div class="close-btn-area">
+
+        <button id="close-btn">X</button> 
+      </div>
+      <div id="image-show-area">
+        <img id="large-image" src="images/gateway.png" alt="">
+      </div>
+      </div>
+            
+      </div>
+
+        </div>
+        </div>
+        </div>
+     </div> -->
+
+      <!-- jquery for modal popup for images-->
+
+      <!-- <script src="https:cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+
+      <!-- <script>
+      $( document ).ready(function(){
+        $("#close-btn").click(function(){
+      // remove active class from all images
+      $(".small-image").removeClass('active');
+      $("#show_image_popup").slideUp();
+      })
+
+      $(".small-image").click(function(){
+        // remove active class from all images
+      $(".small-image").removeClass('active');
+      // add active class
+      $(this).addClass('active');
+
+      var image_path = $(this).attr('src'); 
+      $("#show_image_popup").fadeOut();
+      // now st this path to our popup image src
+      $("#show_image_popup").fadeIn();
+      $("#large-image").attr('src',image_path);
+
+      })
+
+      })
+      </script> -->
+
+
+
+  </body>
+ </html>
