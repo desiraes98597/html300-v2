@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang ="en">
+   <head>
+        <meta charset="utf-8">
+        <title>Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/244a5d22d8.js" crossorigin="anonymous"></script>
+
+       
+    </head>    
+<body>
+ 
+
+ <!-- overarching class -->
+ <div class="parent_contact">
+ 
+    <!-- navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" >Home</a> </li>
+            <li> |</li>
+            <li><a href="resume.html">Resume </a></li>
+            <li> |</li>
+            <li><a href="contact.html" id="current">Contact </a></li>
+            <li> |</li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li> |</li>
+            <li><a href="#">Blog </a></li>
+        </ul>  
+    </nav>  
+
+
+<!-- left side -->
+ 
+    <div class="aside1_contact">
+        <div class="first">   
+          <h1 > Feel free to reach out!</h1>    
+              <blockquote>I would love to collaborate with you about any projects you have in mind. No job is too small. I currently do this 
+                  work on the side, so keep that in mind when considering how much time to allow for your project. Pricing can be negotiated and are based 
+                  on an hourly rate.  
+              </blockquote>
+          </div>
+        </div>
+
+   <div class="content1">
+   <!-- contact form -->
+   <div class=form>
+   <form method="GET">
+        <label>What is your name:
+            <input type="text" name="contacttName">
+        </label>
+        <label>What is your email:
+            <input type="email" name="contactEmail">
+        </label>
+        <label for="phone">What is your phone number</label>
+            <input type="tel" id="phone" name="ContactPhone" placeholder="123-456-7890 example" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <label>Tell me a little about what you are interested in. Are you looking for a new website <br>or an updated of a 
+         current site. The more detail you can supply the better.<br> I will contact you back with 3 business days. 
+             <textarea name="contactReason" rows="5" cols="50">Please describe your request</textarea>
+        </label>  
+    <div class="dropdown">
+        <label>What is the best method to contact you by?
+            <select name="contact">
+                <option value="">Please select</option>
+                <option value="few">Email</option>
+                <option value="some">Phone</option>
+                <option value="many">Text</option>
+            </select>
+         </label>
+    </div>
+      <input type="submit" value="Submit contact form">
+   </form>
+  </div>
+</div>
+
+<footer>
+    <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script>  Denise Pedro | <a href="denisepedro.com" target="_blank"> denisepedro.com</a> <i class="far fa-envelope-open"></i></p>
+  </footer>
+</div>
+
+</body>
+</html>
